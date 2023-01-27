@@ -44,6 +44,7 @@ kind: Deployment
 metadata:
   name: appweb
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: appweb
