@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
         - name: appweb
-          image: bach93/kube-news:v1
+          image: bach93/kube-news:{{TAG}}
           ports:
             - containerPort: 8080
           env:
@@ -79,5 +79,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
